@@ -1,0 +1,63 @@
+<script type="text/javascript">
+    RED.nodes.registerType('RTC-alert',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            server: {value:"https://host:port/ccm"},
+            projectArea: {value:"JKE Banking (Change Management)"},
+            userId: {value:""},
+            password: {value:""},
+            title: {value:""},
+            description: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"RTC-alert";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="RTC-alert">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-server"><i class="icon-tag"></i> RTC Server</label>
+        <input type="text" id="node-input-server">
+    </div>
+    <div class="form-row">
+        <label for="node-input-projectArea"><i class="icon-tag"></i> Project area</label>
+        <input type="text" id="node-input-projectArea">
+    </div>
+    <div class="form-row">
+        <label for="node-input-userId"><i class="icon-tag"></i> User ID</label>
+        <input type="text" id="node-input-userId">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="icon-tag"></i> Password</label>
+        <input type="password" id="node-input-password">
+    </div>
+    <div class="form-row">
+        <label for="node-input-title"><i class="icon-tag"></i> Title</label>
+        <input type="text" id="node-input-title">
+    </div>
+    <div class="form-row">
+        <label for="node-input-description"><i class="icon-tag"></i> Description</label>
+        <input type="text" id="node-input-description">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="RTC-alert">
+    <p>A node that creates an RTC Alert in a given project area.</p>
+    <p>Please provide the following information:</p>
+    <ul>
+        <li>The URL to the RTC server</li>
+        <li>The project area to create the Alert in</li>
+        <li>Credentials for a user who has permission to create work items in the project area</li>
+        <li>Alert title and description</li>
+    </ul>
+</script>
