@@ -4,10 +4,10 @@ A node that creates an RTC Alert when the node is executed.
 
 ## Installation
 
-Install `node-red-contrib-RTC-alert-node` using [npm](https://www.npmjs.com/):
+Install `node-red-constrib-rtc-alert-node` using [npm](https://www.npmjs.com/):
 
 ```bash
-npm install --save node-red-contrib-RTC-alert-node
+npm install --save node-red-constrib-rtc-alert-node
 ```
 
 ## Usage
