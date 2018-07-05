@@ -5,7 +5,7 @@ module.exports = function(node) {
 
 	var OSLCServer = require('oslc-client');
 	var server = new OSLCServer(node.server);
-	var OSLCResource = require('oslc-client/resource')
+	var OSLCResource = require('oslc-client/OSLCResource')
 	require('oslc-client/namespaces')
 
 	var member = null
@@ -32,7 +32,7 @@ module.exports = function(node) {
 			alert.setTitle(node.title)
 			alert.setDescription(node.description)
 			alert.set(RDF('type'), OSLCCM('ChangeRequest'))
-			server.create('alert', alert, function(err, result) {
+			server.create('task', alert, function(err, result) {
 				if (err) return node.error('Could not create Alert: '+err)
 				// send the input to the output
 	            var msg = {payload: result.id.uri}
