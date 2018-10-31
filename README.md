@@ -1,5 +1,9 @@
 # node-red-contrib-alert-node
 
+[![Discourse status](https://img.shields.io/discourse/https/meta.discourse.org/status.svg)](https://forum.open-services.net/)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/OSLC/chat)
+
+
 A node that creates an RTC Alert when the node is executed.
 
 ## Installation
